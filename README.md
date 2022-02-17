@@ -11,11 +11,17 @@ npm install @react-native/fingerprint
 ## Usage
 
 ```js
-import { multiply } from "@react-native/fingerprint";
+import { Authenticate } from '@react-native/fingerprint';
 
-// ...
-
-const result = await multiply(3, 7);
+const configObject = {
+  title: 'My App',
+  subtitle: 'Authenticate to Unlock',
+  description: 'Use fingerprint, pattern or pin to unlock to proceed.',
+  usePassword: true,
+};
+Authenticate(configObject, (success, error) => {
+  console.log(success, error);
+});
 ```
 
 ## Contributing

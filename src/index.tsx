@@ -16,7 +16,21 @@ const Fingerprint = NativeModules.Fingerprint
         },
       }
     );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return Fingerprint.multiply(a, b);
+export function Authenticate(
+  configObject: {
+    title: String;
+    subtitle: String;
+    description: String;
+    usePassword: Boolean;
+  },
+  callback: (success: boolean, error: String) => void
+) {
+  const { title, subtitle, description, usePassword } = configObject;
+  return Fingerprint.useFingerPrint(
+    title,
+    subtitle,
+    description,
+    usePassword,
+    callback
+  );
 }

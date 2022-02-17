@@ -1,13 +1,22 @@
+import { Authenticate } from '@react-native/fingerprint';
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@react-native/fingerprint';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<boolean | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    Authenticate(
+      {
+        title: 'My App',
+        subtitle: 'Authenticate to Unlock',
+        description: 'Use fingerprint, pattern or pin to unlock to proceed.',
+        usePassword: true,
+      },
+      (success, error) => {
+        setResult(success);
+      }
+    );
   }, []);
 
   return (
