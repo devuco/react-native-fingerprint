@@ -1,11 +1,23 @@
 # react-native-fingerprint-auth
 
-React Native library for native fingerprint auth
+React Native library for native fingerprint authentication(android only)
 
 ## Installation
 
 ```sh
 npm install react-native-fingerprint-auth
+```
+
+or
+
+```sh
+yarn add react-native-fingerprint-auth
+```
+
+## Android Permissions
+
+```xml
+<uses-permission android:name="android.permission.USE_BIOMETRIC"/>
 ```
 
 ## Usage
