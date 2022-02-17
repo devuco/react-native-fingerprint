@@ -1,17 +1,17 @@
-# @react-native/fingerprint
+# react-native-fingerprint-auth
 
 React Native library for native fingerprint auth
 
 ## Installation
 
 ```sh
-npm install @react-native/fingerprint
+npm install react-native-fingerprint-auth
 ```
 
 ## Usage
 
 ```js
-import { Authenticate } from '@react-native/fingerprint';
+import { FingerPrint } from 'react-native-fingerprint-auth';
 
 const configObject = {
   title: 'My App',
@@ -19,7 +19,7 @@ const configObject = {
   description: 'Use fingerprint, pattern or pin to unlock to proceed.',
   usePassword: true,
 };
-Authenticate(configObject, (success, error) => {
+FingerPrint.Authenticate(configObject, (success, error) => {
   console.log(success, error);
 });
 ```

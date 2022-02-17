@@ -1,6 +1,6 @@
 {
-  "name": "@react-native/fingerprint",
-  "version": "0.1.0",
+  "name": "react-native-fingerprint-auth",
+  "version": "1.0.0",
   "description": "React Native library for native fingerprint auth",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

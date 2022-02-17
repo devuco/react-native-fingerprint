@@ -16,7 +16,9 @@ const Fingerprint = NativeModules.Fingerprint
         },
       }
     );
-export function Authenticate(
+const FingerPrint = { Authenticate };
+export { FingerPrint };
+function Authenticate(
   configObject: {
     title: String;
     subtitle: String;

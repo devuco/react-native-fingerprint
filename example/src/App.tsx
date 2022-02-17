@@ -1,12 +1,12 @@
-import { Authenticate } from '@react-native/fingerprint';
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { FingerPrint } from 'react-native-fingerprint-auth';
 
 export default function App() {
   const [result, setResult] = React.useState<boolean | undefined>();
 
   React.useEffect(() => {
-    Authenticate(
+    FingerPrint.Authenticate(
       {
         title: 'My App',
         subtitle: 'Authenticate to Unlock',
