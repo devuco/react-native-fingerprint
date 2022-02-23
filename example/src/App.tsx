@@ -13,8 +13,9 @@ export default function App() {
         description: 'Use fingerprint, pattern or pin to unlock to proceed.',
         usePassword: true,
       },
-      (success, error) => {
+      (success: boolean, error: any) => {
         setResult(success);
+        console.log('error', error);
       }
     );
   }, []);
